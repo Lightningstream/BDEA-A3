@@ -2,7 +2,7 @@ version: '3.1'
 services:
   graph_db: 
     container_name: graph_db
-    image: docker_neo4j
+    image: neo4j
     build:
       dockerfile: ./Dockerfile
     ports:
@@ -10,6 +10,7 @@ services:
       - 7687:7687
     volumes:
       - ./neo4j:/data
+      - ./import:/var/lib/neo4j/import
     environment:
       - NEO4J_AUTH=neo4j/password
   jupyter:
