@@ -8,7 +8,7 @@ COPY tweets.csv ./tweets.csv
 COPY import.py ./import.py
 RUN python3 import.py
 
-COPY users.csv import/users.csv
-COPY relations.csv import/relations.csv
+RUN mv users.csv import/users.csv
+RUN mv relations.csv import/relations.csv
  
 
