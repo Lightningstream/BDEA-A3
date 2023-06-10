@@ -3,7 +3,6 @@ lines = relations_file.readlines()
 
 relations = []
 users = set()
-# Strips the newline character
 for line in lines:
     line = line.replace('\n','')
     id1, id2 = line.split(' ')
