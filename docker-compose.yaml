@@ -2,7 +2,7 @@ version: '3.1'
 services:
   graph_db: 
     container_name: graph_db
-    image: graph
+    image: graph_db
     build:
       dockerfile: ./Dockerfile
     ports:
