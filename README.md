@@ -14,9 +14,12 @@ Auf dem Jupyter-Notebook befinden sich alle Queries und Imports.
 `localhost:8888` aufrufen und das Neo4j Import and Queries.ipynb öffnen
 
 Für Visualisierungen können auch die Web GUIs verwendet werden.
+Username: neo4j
+Passwort: password
 
 `localhost:7474`
 -> neo4j Web GUI core1
+
 
 `localhost:7475`
 -> neo4j Web GUI core2
