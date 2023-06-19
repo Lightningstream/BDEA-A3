@@ -1,7 +1,4 @@
 ```
-docker compose build
-```
-```
 docker compose up
 ```
 ```
@@ -11,4 +8,10 @@ localhost:8888
 -> ipynb
 
 localhost:7474
--> neo4j Web GUI
+-> neo4j Web GUI core1
+
+localhost:7475
+-> neo4j Web GUI core2
+
+localhost:7476
+-> neo4j Web GUI core3
