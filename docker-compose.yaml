@@ -67,8 +67,7 @@ services:
       neo4j-internal:
         ipv4_address: 178.201.0.3
         aliases:
-          - neo4j-networ6-19T07:48:16.92Z
-bdea-a3-core3-1    | 2023-06-19 08:05:22.764+0000 INFO  Started.k
+          - neo4j-network
     ports:
       - "7475:7474"
       - "7688:7687"
