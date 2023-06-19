@@ -12,7 +12,9 @@ services:
 
   jupyter:
     image: jupyter/datascience-notebook
-    network_mode: "host"
+    networks:
+      neo4j-internal:
+        ipv4_address: 178.201.0.7
     ports:
       - 8888:8888
     volumes:
