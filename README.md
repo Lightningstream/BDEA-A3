@@ -2,7 +2,7 @@
 docker compose up
 ```
 ```
-docker exec -it graph_db chmod -R 777 import
+docker exec -it core1 chmod -R 777 import
 ```
 localhost:8888
 -> ipynb

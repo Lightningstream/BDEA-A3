@@ -26,6 +26,7 @@ services:
 
   core1:
     image: neo4j:4.4-enterprise
+    container_name: core1
     hostname: core1
     networks:
       neo4j-internal:
@@ -60,6 +61,7 @@ services:
 
   core2:
     image: neo4j:4.4-enterprise
+    container_name: core2
     hostname: core2
     networks:
       neo4j-internal:
@@ -93,6 +95,7 @@ services:
 
   core3:
     image: neo4j:4.4-enterprise
+    container_name: core3
     hostname: core3
     networks:
       neo4j-internal:
@@ -123,57 +126,3 @@ services:
       - NEO4J_dbms_connector_http_advertised__address=178.201.0.4:7689
       - NEO4J_dbms_memory_heap_initial__size=1GB
       - NEO4J_dbms_memory_heap_max__size=2GB
-
-
-  # core4:
-  #   image: neo4j:4.4-enterprise
-  #   hostname: core4
-  #   networks:
-  #     neo4j-internal:
-  #       ipv4_address: 178.201.0.5
-  #       aliases:
-  #         - neo4j-network
-  #   ports:
-  #     - "7477:7474"
-  #     - "7690:7687"
-  #   volumes:
-  #     - ./data/core4:/var/lib/neo4j/data
-  #     - ./logs/core4:/var/lib/neo4j/logs
-  #     # - ./conf/core3:/var/lib/neo4j/conf
-  #     # - ./import:/var/lib/neo4j/import
-
-  #   environment:
-  #     - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
-  #     - NEO4J_AUTH=neo4j/password
-  #     - EXTENDED_CONF=yes
-  #     - NEO4J_EDITION=docker_compose
-  #     - NEO4J_dbms_mode=READ_REPLICA
-  #     - NEO4J_causal__clustering_discovery__type=DNS
-  #     - NEO4J_causal__clustering_initial__discovery__members=neo4j-network:5000
-  #     - NEO4J_causal__clustering_discovery__advertised__address=178.201.0.5
-  #     - NEO4J_dbms_connector_bolt_advertised__address=core4
-  #     - NEO4J_dbms_connector_http_advertised__address=core4
-
-  # readreplica1:
-  #   image: neo4j:4.4-enterprise
-  #   hostname: replica1
-  #   networks:
-  #     neo4j-internal:
-  #       aliases:
-  #         - neo4j-network
-  #   ports:
-  #     - "7477:7474"
-  #     - "7690:7687"
-  #   volumes:
-  #     - ./data/replica1:/var/lib/neo4j/data
-  #     - ./logs/replica1:/var/lib/neo4j/logs
-  #     - ./conf/replica1:/var/lib/neo4j/conf
-  #     - ./import/replica1:/var/lib/neo4j/import
-
-  #   environment:
-  #     - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
-  #     - NEO4J_AUTH=neo4j/password
-  #     - EXTENDED_CONF=yes
-  #     - NEO4J_EDITION=docker_compose
-  #     - NEO4J_dbms_mode=READ_REPLICA
-  #     - NEO4J_dbms_cluster_discovery_endpoints=core1:5000,core2:5000,core3:5000
