@@ -3,3 +3,5 @@ neo4j
 import/*
 relations.csv
 users.csv
+logs/
+data/
